@@ -17,19 +17,19 @@ class ToDoItem extends React.Component {
             <li
                 onClick = { this.onTodoClick }
                 style={{textDecoration: !completed ? 'line-through' : 'none',
-                                    cursor: completed ? 'default' : 'pointer'}}>
+                                    cursor: !completed ? 'default' : 'pointer'}}>
                 { item }
             </li>
         )
     }
 
     onTodoClick = () => {
-        console.log('click');
-        this.setState({
-            completed: false
-        })
+        if (this.state.completed){
+            this.setState({
+                completed: false
+            })
+        }
     }
-
 }
 
 ToDoItem.propTypes = {

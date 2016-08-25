@@ -1,6 +1,6 @@
 import ReactDOM from "react-dom";
 import React from "react";
-import ToDoList from '../components/toDoList';
+import ToDoList from '../components/toDoList/toDoList';
 
 const items = ['task1'];
 
