@@ -1,7 +1,7 @@
 import React from 'react';
-import ToDoItem from './toDoItem.js'
+import ToDoItemView from './toDoItemView.js'
 
-class ToDoList extends React.Component {
+class ToDoListView extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -12,8 +12,7 @@ class ToDoList extends React.Component {
             <ul>
                 {
                     items.map((item, index) => {
-                        console.log(item);
-                        return <ToDoItem key={ index } item={ item } completed={true}/>
+                        return <ToDoItemView key={ index } item={ item } completed={true}/>
                     })
                 }
             </ul>
@@ -21,8 +20,8 @@ class ToDoList extends React.Component {
     }
 }
 
-ToDoList.propTypes = {
+ToDoListView.propTypes = {
     items: React.PropTypes.array
 };
 
-export default ToDoList;
+export default ToDoListView;

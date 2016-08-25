@@ -1,6 +1,6 @@
 import React from 'react';
 
-class ToDoItem extends React.Component {
+class ToDoItemView extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -12,7 +12,6 @@ class ToDoItem extends React.Component {
         const { item } = this.props;
         const completed = this.state.completed;
 
-        console.log(completed);
         return (
             <li
                 onClick = { this.onTodoClick }
@@ -32,9 +31,9 @@ class ToDoItem extends React.Component {
     }
 }
 
-ToDoItem.propTypes = {
+ToDoItemView.propTypes = {
     item: React.PropTypes.string,
     completed: React.PropTypes.bool
 };
 
-export default ToDoItem;
+export default ToDoItemView;

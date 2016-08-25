@@ -1,11 +1,11 @@
 import ReactDOM from "react-dom";
 import React from "react";
-import ToDoList from '../components/toDoList/toDoList';
+import ToDoListView from '../components/toDoList/toDoListView';
 
 const items = ['task1'];
 
 ReactDOM.render(
-    <ToDoList items = { items } />,
+    <ToDoListView items = { items } />,
     document.getElementById('container')
 );
 
