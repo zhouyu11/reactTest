@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
-    "test": "./node_modules/mocha/bin/mocha --compilers js:babel-core/register **/**/*spec.js"
+    "test": "./node_modules/mocha/bin/mocha --compilers js:babel-core/register test/*"
   },
   "keywords": [],
   "author": "",
