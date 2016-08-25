@@ -1,5 +1,5 @@
 import React from 'react';
-import ToDoItemView from './toDoItemView.js'
+import ToDoItemView from './todoItemView.js'
 
 class ToDoListView extends React.Component {
     constructor(props) {
