@@ -1,4 +1,3 @@
-import ReactDOM from "react-dom";
 import React from "react";
 
 export default class ProductCategoryRow extends React.Component {

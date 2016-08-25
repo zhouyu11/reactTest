@@ -1,5 +1,5 @@
 module.exports = {
-  entry: './apps/counterApp.js',
+  entry: './src/apps/toDoListApp.js',
   output: {
     path : './',
     filename: 'index.js'
@@ -15,7 +15,7 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel',
         query: {
-          presets: ['es2015', 'react']
+          presets: ['es2015', 'react', "stage-0"]
         }
       }
     ]

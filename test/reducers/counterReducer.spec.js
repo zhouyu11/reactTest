@@ -1,5 +1,5 @@
 import expect from 'expect';
-import counterReducer from '../../reducers/counterReducer';
+import counterReducer from '../../src/reducers/counterReducer';
 
 describe('reducers', () => {
     describe('counter', () => {
