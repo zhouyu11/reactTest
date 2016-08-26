@@ -10,3 +10,4 @@ gen
 index.js
 node_modules
 /coverage/
+dist
