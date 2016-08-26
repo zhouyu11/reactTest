@@ -1,6 +1,5 @@
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var ReactToHtmlPlugin = require('react-to-html-webpack-plugin');
 
 var path = require('path');
 var ejs = require('ejs');
@@ -13,6 +12,11 @@ module.exports = {
     filename: 'index.js',
     path: path.resolve('./dist'),
     libraryTarget: 'umd'
+  },
+
+  devServer: {
+    inline: true,
+    port: 3333
   },
 
   module: {
