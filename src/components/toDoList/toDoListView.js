@@ -1,5 +1,10 @@
 import React from 'react';
 import ToDoItemView from './todoItemView.js'
+import classNames from 'classnames/bind';
+
+import styles from './toDoList.scss';
+
+const cx = classNames.bind(styles);
 
 class ToDoListView extends React.Component {
     constructor(props) {
@@ -18,7 +23,7 @@ class ToDoListView extends React.Component {
     render() {
         const { items, text } = this.state;
         return (
-            <div>
+            <div className={ cx('body') }>
                 <div>
                     <input type="text" value={ text } onChange={ this.handleInputChange }/>
                     <button onClick={ this.addTasks }>add tasks</button>

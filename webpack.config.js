@@ -7,7 +7,7 @@ var ejs = require('ejs');
 var fs = require('fs');
 
 module.exports = {
-  entry: './src/main.js',
+  entry: './src/apps/toDolistApp.js',
 
   output: {
     filename: 'index.js',
@@ -17,9 +17,16 @@ module.exports = {
 
   module: {
     loaders: [
-      { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
-      { test: /\.css$/, loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader') },
-      { test: /\.svg$/, loader: "url-loader?limit=10000&mimetype=image/svg+xml" }
+      {test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/},
+      {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader')
+      },
+      {
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]!postcss!sass')
+      },
+      {test: /\.svg$/, loader: "url-loader?limit=10000&mimetype=image/svg+xml"}
     ]
   },
 
